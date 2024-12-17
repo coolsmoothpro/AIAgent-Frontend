@@ -52,7 +52,7 @@ const SignIn: React.FC = () => {
                 dispatch(setToken(res.payload.token));
 
                 setTimeout(() => {
-                    navigate("/agents");
+                    navigate("/aiagent");
                 }, 1000);
             }
         } catch (error) {

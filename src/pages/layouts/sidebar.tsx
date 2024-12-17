@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { Layout, Menu, Typography } from "antd";
-import { ShrinkOutlined, ArrowsAltOutlined, UserOutlined, PhoneOutlined } from "@ant-design/icons";
+import { ShrinkOutlined, PhoneOutlined } from "@ant-design/icons";
 import { GREEN_COLOR } from "@/constants";
 
 const { Sider } = Layout;
@@ -35,12 +35,12 @@ const Sidebar: React.FC<SidebarProps> = ({ collapsed }) => {
                 <Menu.Item key="5" icon={<PhoneOutlined />} onClick={() => goToPage("/powerdialer")}>
                     Power Dialer
                 </Menu.Item>
-                <Menu.Item key="3" icon={<ArrowsAltOutlined />} onClick={() => goToPage("/outbound")}>
+                {/* <Menu.Item key="3" icon={<ArrowsAltOutlined />} onClick={() => goToPage("/outbound")}>
                     Outbound Agent
                 </Menu.Item>
                 <Menu.Item key="4" icon={<UserOutlined />} onClick={() => goToPage("/agents")}>
                     Agents
-                </Menu.Item>
+                </Menu.Item> */}
             </Menu>
         </Sider>
     );

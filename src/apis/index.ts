@@ -39,9 +39,11 @@ api.interceptors.response.use(
 const login = (data: any) => api.post('/api/v1/auth/signin', data);
 const signup = (data: any) => api.post('/api/v1/auth/signup', data);
 const outbound = () => api.get('/api/v1/agent/outbound-call');
+const incoming = () => api.post('/api/v1/agent/incoming-call');
 const aiagent = (data: any) => api.post('/api/v1/agent/aiagent-call', data);
+const aiwelcome = (data: any) => api.post('/api/v1/agent/aiwelcome-call', data);
 const addPhone = (data: any) => api.post('/api/v1/agent/add_to_queue', data);
-const startDailer = () => api.post('/api/v1/agent/start_dialer');
+const startDailer = (data: any) => api.post('/api/v1/agent/start_dialer', data);
 const generateText = (data: any) => api.post('/api/v1/agent/generate-text', data);
 
 export const apis = {
@@ -49,7 +51,9 @@ export const apis = {
     signup,
     outbound,
     aiagent,
+    aiwelcome,
     generateText,
     addPhone,
-    startDailer
+    startDailer,
+    incoming
 }
